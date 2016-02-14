@@ -11,7 +11,6 @@
 import UIKit
 import MapKit
 import Alamofire
-//import SwiftyJSON
 
 class MapsViewController: UIViewController {
 
@@ -92,16 +91,5 @@ class MapsViewController: UIViewController {
                 print("There was an error \(Error)")
             }
         }
-
-    
-        
-//        let business = Business(title: title, address: address, city: city, id: id, latitude: latitude, longitude: longitude, name: name, notes: notes, phone: phone, state: state, type: type, website: website, coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
-//        mapView.addAnnotation(business)
-        //there is also addAnnotations method for array
     }
-//coordinate: CLLocationCoordinate2D(latitude: 44.577977, longitude: -123.261567)
-    
-
-
-
 }
