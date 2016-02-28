@@ -49,6 +49,7 @@ class RepairViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CatCell", forIndexPath: indexPath) as UITableViewCell
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         cell.textLabel?.text = nameArray[indexPath.row]
         return cell
     }
