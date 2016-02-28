@@ -8,6 +8,7 @@
 
 import Foundation
 import MapKit
+import AddressBook
 
 class Business: NSObject, MKAnnotation {
     let title: String?
@@ -46,4 +47,26 @@ class Business: NSObject, MKAnnotation {
     var subtitle: String? {
         return name
     }
+    
+    //fuction for opening location in Maps
+    func mapItem() -> MKMapItem {
+        let addressDictionary = [String(kABPersonAddressStreetKey): name]
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDictionary)
+        
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = title
+        
+        return mapItem
+    }
+    
+//    func pinColor() -> pinTintColor {
+//        switch type {
+//            case "reuse":
+//                return .Green
+//            case "repair":
+//                return .Purple
+//            default:
+//                return .Red
+//        }
+//    }
 }

@@ -50,8 +50,33 @@ class ReuseViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CatCell", forIndexPath: indexPath) as UITableViewCell
         cell.textLabel?.text = nameArray[indexPath.row]
+//        
+//        var selectedCell = tableView.cellForRowAtIndexPath(indexPath)! as busCell
+//        performSegueWithIdentifier("showBusiness", sender: cell)
+        
+        
         return cell
     }
-}
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "reuseSeg" {
+            if let destination = segue.destinationViewController as? ReuseCatBusinesses {
+                
+                let path = tableView.indexPathForSelectedRow
+                let cell = tableView.cellForRowAtIndexPath(path!)
+                destination.chosenCat = (cell?.textLabel?.text!)!
+                
+            }
+      
+        }
+    }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        _ = tableView.indexPathForSelectedRow!
+        if let _ = tableView.cellForRowAtIndexPath(indexPath) {
+            self.performSegueWithIdentifier("reuseSeg", sender: self)
+        }
+        
+    }}
 
 

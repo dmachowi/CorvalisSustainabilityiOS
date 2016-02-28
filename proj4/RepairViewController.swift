@@ -52,6 +52,26 @@ class RepairViewController: UITableViewController {
         cell.textLabel?.text = nameArray[indexPath.row]
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "repairSeg" {
+            if let destination = segue.destinationViewController as? RepairCatBusinesses {
+                
+                let path = tableView.indexPathForSelectedRow
+                let cell = tableView.cellForRowAtIndexPath(path!)
+                destination.chosenCat = (cell?.textLabel?.text!)!
+                
+            }
+            
+        }
+    }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        _ = tableView.indexPathForSelectedRow!
+        if let _ = tableView.cellForRowAtIndexPath(indexPath) {
+            self.performSegueWithIdentifier("repairSeg", sender: self)
+        }
+        
+    }
 }
 
 

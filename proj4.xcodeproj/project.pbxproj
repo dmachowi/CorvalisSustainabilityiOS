@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A1BF88F1C828614003AB93D /* ReuseCatBusinesses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BF88E1C828614003AB93D /* ReuseCatBusinesses.swift */; };
+		7A1BF8931C829F4F003AB93D /* RepairCatBusinesses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BF8921C829F4F003AB93D /* RepairCatBusinesses.swift */; };
 		7A5AFCEA1C703D7300AD8799 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5AFCE91C703D7300AD8799 /* SwiftyJSON.swift */; };
 		7A5AFCEE1C70729C00AD8799 /* ReuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5AFCED1C70729C00AD8799 /* ReuseViewController.swift */; };
 		7A5AFCF21C70961B00AD8799 /* RepairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5AFCF11C70961B00AD8799 /* RepairViewController.swift */; };
@@ -113,6 +115,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7A1BF88E1C828614003AB93D /* ReuseCatBusinesses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseCatBusinesses.swift; sourceTree = "<group>"; };
+		7A1BF8921C829F4F003AB93D /* RepairCatBusinesses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepairCatBusinesses.swift; sourceTree = "<group>"; };
 		7A5AFCE91C703D7300AD8799 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		7A5AFCED1C70729C00AD8799 /* ReuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseViewController.swift; sourceTree = "<group>"; };
 		7A5AFCF11C70961B00AD8799 /* RepairViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepairViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 				7AE89E781C698A5D00D284DE /* Business.swift */,
 				7A5AFCED1C70729C00AD8799 /* ReuseViewController.swift */,
 				7A5AFCF11C70961B00AD8799 /* RepairViewController.swift */,
+				7A1BF88E1C828614003AB93D /* ReuseCatBusinesses.swift */,
+				7A1BF8921C829F4F003AB93D /* RepairCatBusinesses.swift */,
 			);
 			path = proj4;
 			sourceTree = "<group>";
@@ -436,6 +442,8 @@
 				7AE89E6F1C686C7100D284DE /* MapsViewController.swift in Sources */,
 				7AE89E791C698A5D00D284DE /* Business.swift in Sources */,
 				7A5AFCEE1C70729C00AD8799 /* ReuseViewController.swift in Sources */,
+				7A1BF88F1C828614003AB93D /* ReuseCatBusinesses.swift in Sources */,
+				7A1BF8931C829F4F003AB93D /* RepairCatBusinesses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
