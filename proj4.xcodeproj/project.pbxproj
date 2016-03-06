@@ -12,6 +12,10 @@
 		7A5AFCEA1C703D7300AD8799 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5AFCE91C703D7300AD8799 /* SwiftyJSON.swift */; };
 		7A5AFCEE1C70729C00AD8799 /* ReuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5AFCED1C70729C00AD8799 /* ReuseViewController.swift */; };
 		7A5AFCF21C70961B00AD8799 /* RepairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5AFCF11C70961B00AD8799 /* RepairViewController.swift */; };
+		7A729D8E1C8BF6DD002F546A /* ReuseCatBusInf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A729D8D1C8BF6DD002F546A /* ReuseCatBusInf.swift */; };
+		7A729D901C8BFF0F002F546A /* singleMapReuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A729D8F1C8BFF0F002F546A /* singleMapReuse.swift */; };
+		7A729D921C8C0410002F546A /* singleMapRepair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A729D911C8C0410002F546A /* singleMapRepair.swift */; };
+		7A729D941C8C0432002F546A /* RepairCatBusInf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A729D931C8C0432002F546A /* RepairCatBusInf.swift */; };
 		7AE89E381C684D4600D284DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE89E371C684D4600D284DE /* AppDelegate.swift */; };
 		7AE89E3D1C684D4600D284DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE89E3B1C684D4600D284DE /* Main.storyboard */; };
 		7AE89E401C684D4600D284DE /* proj4.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7AE89E3E1C684D4600D284DE /* proj4.xcdatamodeld */; };
@@ -120,6 +124,10 @@
 		7A5AFCE91C703D7300AD8799 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		7A5AFCED1C70729C00AD8799 /* ReuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseViewController.swift; sourceTree = "<group>"; };
 		7A5AFCF11C70961B00AD8799 /* RepairViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepairViewController.swift; sourceTree = "<group>"; };
+		7A729D8D1C8BF6DD002F546A /* ReuseCatBusInf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseCatBusInf.swift; sourceTree = "<group>"; };
+		7A729D8F1C8BFF0F002F546A /* singleMapReuse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = singleMapReuse.swift; sourceTree = "<group>"; };
+		7A729D911C8C0410002F546A /* singleMapRepair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = singleMapRepair.swift; sourceTree = "<group>"; };
+		7A729D931C8C0432002F546A /* RepairCatBusInf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepairCatBusInf.swift; sourceTree = "<group>"; };
 		7AE89E341C684D4600D284DE /* proj4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proj4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AE89E371C684D4600D284DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AE89E3C1C684D4600D284DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -205,6 +213,10 @@
 				7A5AFCF11C70961B00AD8799 /* RepairViewController.swift */,
 				7A1BF88E1C828614003AB93D /* ReuseCatBusinesses.swift */,
 				7A1BF8921C829F4F003AB93D /* RepairCatBusinesses.swift */,
+				7A729D8D1C8BF6DD002F546A /* ReuseCatBusInf.swift */,
+				7A729D931C8C0432002F546A /* RepairCatBusInf.swift */,
+				7A729D8F1C8BFF0F002F546A /* singleMapReuse.swift */,
+				7A729D911C8C0410002F546A /* singleMapRepair.swift */,
 			);
 			path = proj4;
 			sourceTree = "<group>";
@@ -434,16 +446,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AE89E401C684D4600D284DE /* proj4.xcdatamodeld in Sources */,
+				7A729D941C8C0432002F546A /* RepairCatBusInf.swift in Sources */,
 				7A5AFCEA1C703D7300AD8799 /* SwiftyJSON.swift in Sources */,
+				7A729D901C8BFF0F002F546A /* singleMapReuse.swift in Sources */,
 				7AE89E7B1C699BBE00D284DE /* MapsVCMapView.swift in Sources */,
 				7A5AFCF21C70961B00AD8799 /* RepairViewController.swift in Sources */,
 				7AE89E6B1C68581C00D284DE /* HomeTableViewController.swift in Sources */,
 				7AE89E381C684D4600D284DE /* AppDelegate.swift in Sources */,
+				7A729D921C8C0410002F546A /* singleMapRepair.swift in Sources */,
 				7AE89E6F1C686C7100D284DE /* MapsViewController.swift in Sources */,
 				7AE89E791C698A5D00D284DE /* Business.swift in Sources */,
 				7A5AFCEE1C70729C00AD8799 /* ReuseViewController.swift in Sources */,
 				7A1BF88F1C828614003AB93D /* ReuseCatBusinesses.swift in Sources */,
 				7A1BF8931C829F4F003AB93D /* RepairCatBusinesses.swift in Sources */,
+				7A729D8E1C8BF6DD002F546A /* ReuseCatBusInf.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

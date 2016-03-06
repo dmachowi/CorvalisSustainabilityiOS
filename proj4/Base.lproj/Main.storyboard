@@ -217,10 +217,68 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
                         </connections>
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <segue destination="nhd-6I-Qva" kind="show" identifier="reuseBusInfoSeg" id="4kn-bJ-pgi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6J-mD-9Lv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1807" y="-368"/>
+            <point key="canvasLocation" x="1787" y="-368"/>
+        </scene>
+        <!--Reuse Cat Bus Inf-->
+        <scene sceneID="9CT-si-jQd">
+            <objects>
+                <viewController id="nhd-6I-Qva" customClass="ReuseCatBusInf" customModule="proj4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WoA-fz-c8J"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gvt-sj-44x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IXR-on-dBW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pMC-bQ-EKG" customClass="reuse">
+                                <rect key="frame" x="0.0" y="296" width="414" height="440"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p20-4r-zPq">
+                                <rect key="frame" x="6" y="72" width="401" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7QA-7Y-k86">
+                                <rect key="frame" x="7" y="136" width="401" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCf-Gr-FVv">
+                                <rect key="frame" x="7" y="179" width="401" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFl-gB-Tz9">
+                                <rect key="frame" x="6" y="222" width="401" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="addresslabel" destination="7QA-7Y-k86" id="Jgc-Kh-6uj"/>
+                        <outlet property="mapView" destination="pMC-bQ-EKG" id="RBO-ME-WUh"/>
+                        <outlet property="namelabel" destination="p20-4r-zPq" id="QBK-Xs-QcM"/>
+                        <outlet property="noteslabel" destination="WFl-gB-Tz9" id="jLL-QY-ahD"/>
+                        <outlet property="phonelabel" destination="sCf-Gr-FVv" id="pFX-Gu-w3h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yJp-pj-M7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2294" y="-368"/>
         </scene>
         <!--Repair Cat Businesses-->
         <scene sceneID="REm-QV-Hot">
@@ -231,7 +289,7 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Oq2-rQ-4iB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="busCell" id="Oq2-rQ-4iB">
                                 <rect key="frame" x="0.0" y="92" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oq2-rQ-4iB" id="DHD-zh-HbN">
@@ -246,10 +304,13 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
                         </connections>
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <segue destination="ghh-BI-cVC" kind="show" identifier="repairBusInfoSeg" id="4Tr-px-Q4E"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bha-3E-Kc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1807" y="408"/>
+            <point key="canvasLocation" x="1787" y="417"/>
         </scene>
         <!--Repair View Controller-->
         <scene sceneID="Onk-rC-eGs">
@@ -376,6 +437,61 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2rk-VQ-in7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="314" y="450"/>
+        </scene>
+        <!--Repair Cat Bus Inf-->
+        <scene sceneID="BZc-62-SZE">
+            <objects>
+                <viewController id="ghh-BI-cVC" customClass="RepairCatBusInf" customModule="proj4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QAG-XO-uKT"/>
+                        <viewControllerLayoutGuide type="bottom" id="MOP-Kq-MdT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NZ6-qH-bos">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5bb-73-zHY" customClass="reuse">
+                                <rect key="frame" x="0.0" y="296" width="414" height="440"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VB5-Z3-H74">
+                                <rect key="frame" x="6" y="72" width="401" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dD5-n7-PMk">
+                                <rect key="frame" x="7" y="136" width="401" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xJ-a5-02N">
+                                <rect key="frame" x="7" y="179" width="401" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO5-Pu-SPt">
+                                <rect key="frame" x="6" y="222" width="401" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="addresslabel" destination="dD5-n7-PMk" id="wIK-DS-wJe"/>
+                        <outlet property="mapView" destination="5bb-73-zHY" id="JKB-CG-nAo"/>
+                        <outlet property="namelabel" destination="VB5-Z3-H74" id="13w-nY-lUU"/>
+                        <outlet property="noteslabel" destination="NO5-Pu-SPt" id="Lah-Sd-xdK"/>
+                        <outlet property="phonelabel" destination="5xJ-a5-02N" id="8sY-UP-5BA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LCz-U0-XS6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2294" y="417"/>
         </scene>
     </scenes>
 </document>

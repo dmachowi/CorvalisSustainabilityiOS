@@ -1,23 +1,28 @@
 //
-//  MapsViewController.swift
+//  ReuseCatBusInf.swift
 //  proj4
 //
-//  Created by DREWCIFER on 2/8/16.
+//  Created by DREWCIFER on 3/6/16.
 //  Copyright © 2016 dmm. All rights reserved.
-//http://www.raywenderlich.com/90971/introduction-mapkit-swift-tutorial
-//color code pins basedvar category
+//
 
-
+import Alamofire
 import UIKit
 import MapKit
-import Alamofire
 
-class MapsViewController: UIViewController {
-
+class ReuseCatBusInf: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
-    var businessArray=[Business]()
+    @IBOutlet weak var namelabel: UILabel!
+    @IBOutlet weak var addresslabel: UILabel!
+    @IBOutlet weak var noteslabel: UILabel!
+    @IBOutlet weak var phonelabel: UILabel!
+    
+    @IBOutlet weak var websitelabel: UILabel!
+    var chosenBusID = 0
+    var url = "http://localhost:8888/sustain/app/api/business.php"
     var jsonArray = [JSON] ()
-    var url = "http://localhost:8888/sustain/app/api/businesses.php"
+    var nameArray=[String]()
+    
     
     let regionRadius: CLLocationDistance = 1000
     func centerMapOnScreen(location: CLLocation) {
@@ -40,22 +45,16 @@ class MapsViewController: UIViewController {
         var thisType = ""
         var thisWebsite = ""
         
-        
-        //center of corvallis, later change to get location from gps on phone
-        let intialLocation = CLLocation(latitude: 44.564566, longitude: -123.262044)
-        centerMapOnScreen(intialLocation)
-        
+        print(chosenBusID)
         mapView.delegate = self
-        
-        Alamofire.request(.GET, url).responseJSON{
+        Alamofire.request(.POST, url, parameters: ["bus_id":chosenBusID], encoding: .JSON).responseJSON{
             response in switch response.result{
             case .Success:
                 if let value = response.result.value {
                     let json = JSON(value)
-                    //print("JSON: \(json)")
-                
+                    print("JSON: \(json)")
+                    
                     for(key, subJson):(String, JSON) in json {
-                        print("this is key: \(key) and this is \(subJson)")
                         self.jsonArray.append(subJson)
                         thisAddress = subJson["address"].stringValue
                         thisCity = subJson["city"].stringValue
@@ -70,15 +69,28 @@ class MapsViewController: UIViewController {
                         thisType = subJson["type"].stringValue
                         thisTitle = subJson["name"].stringValue   //title required for object
                         
+                        self.namelabel.text = thisName
+                        if thisAddress != "" {
+                            self.addresslabel.text = thisAddress + " " + thisCity + ", " + thisState
+                        }
+                        self.phonelabel.text = thisPhone
+                        self.noteslabel.text = thisNotes
+                        
+                        
+                        let intialLocation = CLLocation(latitude: thisLatitude, longitude: thisLongitude)
+                        self.centerMapOnScreen(intialLocation)
+                        
                         let business = Business(title: thisTitle, address: thisAddress, city: thisCity, id: thisId , latitude: thisLatitude, longitude: thisLongitude, name: thisName, notes: thisNotes, phone: thisPhone, state: thisState, type: thisType, website: thisWebsite, coordinate: CLLocationCoordinate2D(latitude: thisLatitude, longitude: thisLongitude))
                         
                         self.mapView.addAnnotation(business)
                     }
-                
                 }
-            case .Failure(let Error):
-                print("There was an error \(Error)")
+            case .Failure(let error):
+                print("There was an error\(error)")
             }
         }
     }
+    
+    
+
 }

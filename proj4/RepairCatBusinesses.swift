@@ -11,10 +11,10 @@ import MapKit
 import Alamofire
 
 class RepairCatBusinesses: UITableViewController {
-    var chosenCat = ""
+    var chosenCat = 0
     var jsonArray = [JSON] ()
     var nameArray=[String]()
-    var url = "http://localhost:8888/sustain/app/api/reuseBusinesses.php"
+    var url = "http://localhost:8888/sustain/app/api/repairBusinesses.php"
     var catID = 0
     var thisTitle = ""
     var thisAddress = ""
@@ -28,10 +28,12 @@ class RepairCatBusinesses: UITableViewController {
     var thisState = ""
     var thisType = ""
     var thisWebsite = ""
+    var catName = ""
+    var busName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Alamofire.request(.POST, url, parameters:["\\\"cat_id\\\"":"1"]).responseJSON{
+        Alamofire.request(.POST, url, parameters:["cat_id":chosenCat], encoding: .JSON).responseJSON{
             response in switch response.result{
             case .Success:
                 if let value = response.result.value {
@@ -45,6 +47,10 @@ class RepairCatBusinesses: UITableViewController {
                     
                     for(key, subJson):(String, JSON) in json {
                         print("this is key: \(key) and this is \(subJson)")
+                        self.jsonArray.append(subJson)
+                        self.catName = subJson["cat_name"].stringValue
+                        self.busName = subJson["bus_name"].stringValue
+                        self.nameArray.append(self.busName)
                         //                        self.jsonArray.append(subJson)
                         //                        self.thisAddress = subJson["address"].stringValue
                         //                        self.thisCity = subJson["city"].stringValue
@@ -75,6 +81,7 @@ class RepairCatBusinesses: UITableViewController {
                         }
                     }
                 }
+                print(self.chosenCat)
             case .Failure(let error):
                 print("There was an error\(error)")
             }
@@ -87,6 +94,7 @@ class RepairCatBusinesses: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("busCell", forIndexPath: indexPath) as UITableViewCell
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         cell.textLabel?.text = nameArray[indexPath.row]
         //
         //        var selectedCell = tableView.cellForRowAtIndexPath(indexPath)! as busCell
@@ -97,30 +105,32 @@ class RepairCatBusinesses: UITableViewController {
     }
     
     
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "reuseSeg" {
-            if let destination = segue.destinationViewController as? ReuseCatBusinesses {
+        if segue.identifier == "repairBusInfoSeg" {
+            if let destination = segue.destinationViewController as? RepairCatBusInf {
                 
                 let path = tableView.indexPathForSelectedRow
                 let cell = tableView.cellForRowAtIndexPath(path!)
-                destination.chosenCat = (cell?.textLabel?.text!)!
-                
+                //destination.chosenCat = (cell?.textLabel?.text!)!
+                let cellText = (cell?.textLabel?.text!)!
+                for item in jsonArray {
+                    var thisName = item["bus_name"]
+                    var thisID = item["bus_id"]
+                    if (thisName).stringValue == cellText {
+                        destination.chosenBusID = (thisID).int!
+                        //print("this is chosencat \(thisID)")
+                    }
+                }
             }
-            
         }
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         _ = tableView.indexPathForSelectedRow!
         if let _ = tableView.cellForRowAtIndexPath(indexPath) {
-            self.performSegueWithIdentifier("reuseSeg", sender: self)
+            self.performSegueWithIdentifier("repairBusInfoSeg", sender: self)
         }
-        
     }
-    //    override func viewDidLoad() {
-    //        super.viewDidLoad()
-    //        
-    //        // Do any additional setup after loading the view.
-    //    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

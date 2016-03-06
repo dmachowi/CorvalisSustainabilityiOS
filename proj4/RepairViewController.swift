@@ -60,8 +60,16 @@ class RepairViewController: UITableViewController {
                 
                 let path = tableView.indexPathForSelectedRow
                 let cell = tableView.cellForRowAtIndexPath(path!)
-                destination.chosenCat = (cell?.textLabel?.text!)!
-                
+                //destination.chosenCat = (cell?.textLabel?.text!)!
+                let cellText = (cell?.textLabel?.text!)!
+                for item in jsonArray {
+                    var thisCatName = item["cat_name"]
+                    var thisID = item["cat_id"]
+                    if (thisCatName).stringValue == cellText {
+                        destination.chosenCat = (thisID).int!
+                        print("this is chosencat \(thisID)")
+                    }
+                }
             }
             
         }

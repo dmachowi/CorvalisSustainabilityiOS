@@ -23,7 +23,7 @@ class ReuseViewController: UITableViewController {
             case .Success:
                 if let value = response.result.value {
                     let json = JSON(value)
-                    //print("JSON: \(json)")
+                    print("JSON: \(json)")
                     
                     for(key, subJson):(String, JSON) in json {
                         self.jsonArray.append(subJson)
@@ -66,10 +66,17 @@ class ReuseViewController: UITableViewController {
                 
                 let path = tableView.indexPathForSelectedRow
                 let cell = tableView.cellForRowAtIndexPath(path!)
-                destination.chosenCat = (cell?.textLabel?.text!)!
-                
+                //destination.chosenCat = (cell?.textLabel?.text!)!
+                let cellText = (cell?.textLabel?.text!)!
+                for item in jsonArray {
+                    var thisCatName = item["cat_name"]
+                    var thisID = item["cat_id"]
+                    if (thisCatName).stringValue == cellText {
+                        destination.chosenCat = (thisID).int!
+                        print("this is chosencat \(thisID)")
+                    }
+                }
             }
-      
         }
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
