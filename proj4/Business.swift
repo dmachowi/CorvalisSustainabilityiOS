@@ -1,10 +1,13 @@
 //
-//  Business.swift
-//  proj4
+//  Reuse and Repair App -- iOS
+//  Drew Matthew Machowicz
+//  Allyce McWhorter
+//  Andrew Pierno
 //
-//  Created by DREWCIFER on 2/9/16.
 //  Copyright © 2016 dmm. All rights reserved.
 //
+//  Business.swift -- Business Object used to store a business and all its data
+//  title and subtitle are required by mkannotation, they are not used
 
 import Foundation
 import MapKit
@@ -58,15 +61,4 @@ class Business: NSObject, MKAnnotation {
         
         return mapItem
     }
-    
-//    func pinColor() -> pinTintColor {
-//        switch type {
-//            case "reuse":
-//                return .Green
-//            case "repair":
-//                return .Purple
-//            default:
-//                return .Red
-//        }
-//    }
 }

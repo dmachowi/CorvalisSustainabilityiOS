@@ -1,10 +1,13 @@
 //
-//  AppDelegate.swift
-//  proj4
+//  Reuse and Repair App -- iOS
+//  Drew Matthew Machowicz
+//  Allyce McWhorter
+//  Andrew Pierno
 //
-//  Created by DREWCIFER on 2/8/16.
 //  Copyright © 2016 dmm. All rights reserved.
 //
+//  AppDelegate.swift
+
 
 import UIKit
 import CoreData

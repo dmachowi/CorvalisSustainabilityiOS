@@ -13,8 +13,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sustainability-Fair.jpg" id="RsM-Gf-t6a">
+                            <rect key="frame" x="0.0" y="64" width="414" height="121"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <textView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" id="32s-6X-0Il">
-                            <rect key="frame" x="0.0" y="308" width="414" height="136"/>
+                            <rect key="frame" x="0.0" y="429" width="414" height="136"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <string key="text">The Republic Recycling Depot and What We Accept:
@@ -30,7 +34,7 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
                             <tableViewSection headerTitle="Corvallis Reuse and Repair Directory" id="1f8-ze-tOF">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="5Z9-sN-ds9" detailTextLabel="tHG-1A-qBR" style="IBUITableViewCellStyleSubtitle" id="xaN-rA-gvF">
-                                        <rect key="frame" x="0.0" y="114" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="235" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xaN-rA-gvF" id="2yq-Fb-0ah">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
@@ -57,7 +61,7 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="6Sj-4o-fiQ" detailTextLabel="R2f-Re-lvx" style="IBUITableViewCellStyleSubtitle" id="aYT-aj-hWC">
-                                        <rect key="frame" x="0.0" y="158" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="279" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aYT-aj-hWC" id="zYU-Dh-SbJ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
@@ -84,7 +88,7 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Vde-Sg-m2k" detailTextLabel="WuA-27-RR0" style="IBUITableViewCellStyleSubtitle" id="wfW-M8-G1j">
-                                        <rect key="frame" x="0.0" y="202" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="323" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wfW-M8-G1j" id="ArR-uC-BUD">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
@@ -111,7 +115,7 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="dPc-UP-1o4" detailTextLabel="kRw-Rv-rB0" style="IBUITableViewCellStyleSubtitle" id="wXQ-s1-lZy">
-                                        <rect key="frame" x="0.0" y="246" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="367" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wXQ-s1-lZy" id="UhX-0F-EWm">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
@@ -155,7 +159,7 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
         <!--Reuse View Controller-->
         <scene sceneID="wy0-9p-ZAG">
             <objects>
-                <tableViewController id="fvv-pg-cZq" customClass="ReuseViewController" customModule="proj4" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="fvv-pg-cZq" customClass="ReuseViewController" customModule="ReuseAndRepair" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vVW-0d-qii">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,7 +176,7 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
                                             <rect key="frame" x="15" y="0.0" width="384" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -196,7 +200,7 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
         <!--Reuse Cat Businesses-->
         <scene sceneID="vzN-Tm-ylL">
             <objects>
-                <tableViewController id="2cr-Rg-beV" customClass="ReuseCatBusinesses" customModule="proj4" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="2cr-Rg-beV" customClass="ReuseCatBusinesses" customModule="ReuseAndRepair" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IFg-1t-A9W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,7 +232,7 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
         <!--Reuse Cat Bus Inf-->
         <scene sceneID="9CT-si-jQd">
             <objects>
-                <viewController id="nhd-6I-Qva" customClass="ReuseCatBusInf" customModule="proj4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nhd-6I-Qva" customClass="ReuseCatBusInf" customModule="ReuseAndRepair" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WoA-fz-c8J"/>
                         <viewControllerLayoutGuide type="bottom" id="Gvt-sj-44x"/>
@@ -238,30 +242,30 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pMC-bQ-EKG" customClass="reuse">
-                                <rect key="frame" x="0.0" y="296" width="414" height="440"/>
+                                <rect key="frame" x="0.0" y="260" width="414" height="480"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p20-4r-zPq">
-                                <rect key="frame" x="6" y="72" width="401" height="56"/>
+                                <rect key="frame" x="6" y="72" width="401" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7QA-7Y-k86">
-                                <rect key="frame" x="7" y="136" width="401" height="35"/>
+                                <rect key="frame" x="7" y="115" width="401" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCf-Gr-FVv">
-                                <rect key="frame" x="7" y="179" width="401" height="35"/>
+                                <rect key="frame" x="7" y="160" width="401" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFl-gB-Tz9">
-                                <rect key="frame" x="6" y="222" width="401" height="66"/>
+                                <rect key="frame" x="6" y="210" width="401" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -283,7 +287,7 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
         <!--Repair Cat Businesses-->
         <scene sceneID="REm-QV-Hot">
             <objects>
-                <tableViewController id="l98-az-3zw" customClass="RepairCatBusinesses" customModule="proj4" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="l98-az-3zw" customClass="RepairCatBusinesses" customModule="ReuseAndRepair" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kIK-US-gaI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -315,7 +319,7 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
         <!--Repair View Controller-->
         <scene sceneID="Onk-rC-eGs">
             <objects>
-                <tableViewController id="fbx-HV-WwH" customClass="RepairViewController" customModule="proj4" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="fbx-HV-WwH" customClass="RepairViewController" customModule="ReuseAndRepair" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="POH-by-pU2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -332,7 +336,7 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
                                             <rect key="frame" x="15" y="0.0" width="384" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -389,7 +393,7 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
         <!--Maps View Controller-->
         <scene sceneID="GTP-Zh-bQA">
             <objects>
-                <viewController id="sDB-2y-3vE" customClass="MapsViewController" customModule="proj4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sDB-2y-3vE" customClass="MapsViewController" customModule="ReuseAndRepair" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dW9-j4-1vr"/>
                         <viewControllerLayoutGuide type="bottom" id="gyN-8g-T5W"/>
@@ -441,7 +445,7 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
         <!--Repair Cat Bus Inf-->
         <scene sceneID="BZc-62-SZE">
             <objects>
-                <viewController id="ghh-BI-cVC" customClass="RepairCatBusInf" customModule="proj4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ghh-BI-cVC" customClass="RepairCatBusInf" customModule="ReuseAndRepair" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QAG-XO-uKT"/>
                         <viewControllerLayoutGuide type="bottom" id="MOP-Kq-MdT"/>
@@ -451,30 +455,30 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5bb-73-zHY" customClass="reuse">
-                                <rect key="frame" x="0.0" y="296" width="414" height="440"/>
+                                <rect key="frame" x="0.0" y="260" width="414" height="480"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VB5-Z3-H74">
-                                <rect key="frame" x="6" y="72" width="401" height="56"/>
+                                <rect key="frame" x="6" y="72" width="401" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dD5-n7-PMk">
-                                <rect key="frame" x="7" y="136" width="401" height="35"/>
+                                <rect key="frame" x="6" y="115" width="401" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xJ-a5-02N">
-                                <rect key="frame" x="7" y="179" width="401" height="35"/>
+                                <rect key="frame" x="7" y="160" width="401" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO5-Pu-SPt">
-                                <rect key="frame" x="6" y="222" width="401" height="66"/>
+                                <rect key="frame" x="6" y="210" width="401" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -494,4 +498,7 @@ http://site.republicservices.com/site/corvallis-or/en/documents/detailedrecyclin
             <point key="canvasLocation" x="2294" y="417"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Sustainability-Fair.jpg" width="1036" height="394"/>
+    </resources>
 </document>
