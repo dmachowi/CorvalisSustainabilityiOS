@@ -69,7 +69,7 @@ class MapsViewController: UIViewController {
             case .Success:
                 if let value = response.result.value {
                     let json = JSON(value)
-                    //print("JSON: \(json)")
+                    print("JSON: \(json)")
                 
                     //takes all the data from the JSON call and creates a Business object with all
                     //data to be added to the map
